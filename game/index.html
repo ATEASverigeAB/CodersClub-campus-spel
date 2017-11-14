@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <!--<style> body {margin-top: 100px; margin-left: auto; margin-right: auto; width: 70%; height: 100%} </style>-->
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+     
+    <!-- jQuery Version 1.11.1 -->
+      <script src="../js/jquery.js"></script>
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="../addons/p5.collide2d.min.js"></script>
+    
+    <script src="sketch.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!-- Modal -->
+    <div class="modal fade" id="initModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" style="color: black" id="myModalLabel">Atea CodersClub - Fånga bollar.</h4>
+              </div>
+              <div class="modal-body" style="color: black">
+                <p>Hej och välkommen till Atea CodersClub's spel.</p>
+                <p>Styr spelet med hjälp av höger och vänster pil, eller genom att trycka på höger respektive vänster sida av skärmen.</p>
+                <p>När du är med och spelar så skänker Ateas Hjälpande Händer 10 kr till Musikhjälpens insamling ”Barn är inte till salu”.
+                    Den totala insamlade summan från er skola kommer att redovisas på atea.se/student
+                </p>
+                <img src="../hjalp.png"></img>
+                <br />
+                <br />
+                <p>Ange din epost adress för att delta:</p>
+                <input type="email" id="userEmail"></input>
+                <br />
+                <a href="#" data-toggle="modal" data-target="#consentModal">Klicka här för att läsa om hur Atea kommer att behandla dina personuppgifter</a>
+                <br />
+                <p>Spelet av skapat av Atea CodersClub,<br /> en intresseorganistation för att sprida kunskapen om kod.</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-success" id="signUpButton">OK</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="consentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" style="color: black" id="myModalLabel">Atea CodersClub - Fånga bollar.</h4>
+              </div>
+              <div class="modal-body" style="color: black">
+              <p>Atea Sverige AB behandlar dina personuppgifter som Personuppgiftsansvarig och ansvarar för att personuppgifterna hanteras korrekt, säkert och I enlighet med gällande lagar och förordningar. <br /><br />
+                  Ändamålet till varför Atea samlar in dina personuppgifter är för att kunna kontakta dig som tack för att du har bidragit till vår insamling samt kontakta dig med resultatet av vår insamling.<br /><br /> Den rättsliga grunden vi använder oss av vid behandling av dina personuppgifter är en intresseavvägning. <br /><br />Atea vidtar alla rimliga säkerhetsåtgärder för att skydda dina personuppgifter och din integritet. <br /><br />Personuppgifterna vi samlar in kommer endast användas av en begränsad grupp av personer på Atea. Vi kommer att radera personuppgifterna efter en månad.<br />
+                  Du har rätt att begära en rapport på vilka personuppgifter Atea behandlar om dig, ett så kallat registerutdrag. <br /><br />Det kan göras kostnadsfritt en gång per år. Du har också rätt att få felaktig information rättad, personuppgifter raderade, återkalla samtycket när som helst och att motsätta dig att dina personuppgifter används för marknadsföring.<br /><br />
+                  Du har alltid rätt att framföra eventuella klagomål rörande behandlingen av personuppgifter till Datainspektionen.<br /><br />
+                  Om du har frågor runt Atea:s behandling av dina personuppgifter, vill kontakta oss eller skicka in en förfrågan rörande dina personuppgifter, kontakta oss på gdpr@atea.se
+                </p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Stäng</button>
+              </div>
+          </div>
+      </div>
+  </div>  
+
+    <!-- Modal -->
+    <div class="modal fade" id="doneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" style="color: black" id="myModalLabel">Atea CodersClub - Fånga bollar.</h4>
+                </div>
+                <div class="modal-body" style="color: black">
+                  <h2>Du fångade <span id="numPhones"></span> bollar!</h2>
+                  <p>Tack för att var med och spelade och skänkte pengar tillsammans med oss!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="doneButton">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+
+  </body>
+</html>
